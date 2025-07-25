@@ -2,8 +2,13 @@ type Venue {
     id: ID!
     externalId: FullExternalId!
     name: String!
+    latestEvents: [Event!]!
 }
 
 input SaveVenueInput {
     name: String!
+}
+
+type QueryVenue {
+  venues: [Venue!]!
 }

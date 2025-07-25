@@ -1,0 +1,15 @@
+query {
+  events {
+    id
+    name
+    startTime
+    endTime
+    venues {
+      brand
+      provider
+      externalId
+      referenceId
+      name
+    }
+  }
+}

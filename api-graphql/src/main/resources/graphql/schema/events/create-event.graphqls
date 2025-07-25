@@ -1,0 +1,20 @@
+mutation {
+  createEvent(input: {
+    venueReferenceId: "ref123"
+    name: "Hearthstone Tournament"
+    startTime: "2025-07-24T14:52:00Z"
+    endTime: "2025-07-24T18:52:00Z"
+  }) {
+    id
+    name
+    startTime
+    endTime
+    venues {
+      brand
+      provider
+      externalId
+      referenceId
+      name
+    }
+  }
+}

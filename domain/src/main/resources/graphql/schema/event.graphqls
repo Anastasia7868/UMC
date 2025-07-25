@@ -1,0 +1,26 @@
+type Event {
+  id: ID!
+  name: String!
+  startTime: String!
+  endTime: String!
+  venues: [Venue!]!
+}
+
+input CreateEventInput {
+  venueReferenceId: String!
+  name: String!
+  startTime: String!
+  endTime: String!
+}
+
+input SaveEventInput {
+  name: String!
+  startTime: String!
+  endTime: String!
+  venueReferenceIds: [ID!]!
+}
+
+type EventVenuesQuery {
+  events: [Event!]!
+  venues: [Venue!]!
+}

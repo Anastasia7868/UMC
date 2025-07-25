@@ -3,6 +3,20 @@ apply from: "${rootProject.rootDir}/gradle/graphql.gradle"
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
 }
+repositories {
+    mavenCentral()
+}
+dependencies {
+    // Lombok dependency
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    // If using Lombok's @Builder or @Slf4j with MapStruct
+    compileOnly "org.mapstruct:mapstruct:${mapstructVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+    annotationProcessor "org.projectlombok:lombok-mapstruct-binding:0.2.0"
+
+}
 
 generateJava {
     schemaPaths = ["${projectDir}/src/main/resources/graphql"]

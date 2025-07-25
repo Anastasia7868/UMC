@@ -1,4 +1,5 @@
-CREATE TABLE venue
+--  V1_create_venue_table.sql
+CREATE TABLE IF NOT EXISTS venue
 (
     brand        VARCHAR(255) NOT NULL,
     provider     VARCHAR(255) NOT NULL,
